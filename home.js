@@ -41,13 +41,26 @@ const consultaGemini = (question) => {
 }
 
 
+
+const textAreaPt = document.getElementById('answer-pt')
 const respostaIa = (responseTextIa) => {
-    const textAreaPt = document.getElementById('answer-pt')
     textAreaPt.value = responseTextIa
 }
+
+
+function translate(){
+    fetch(`https://api.mymemory.translated.net/get?q=${textAreaPt.value}&langpair=en`)
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(textAreaPt.value)
+        console.log(data);
+        Traducao.value = data})
+    }
+
 
 
 button.addEventListener('click', () => {
     const question = document.getElementById('ask').value
     consultaGemini(question)
+    translate(textAreaPt.value)
 })
