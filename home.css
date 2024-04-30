@@ -60,7 +60,12 @@ main{
     overflow: hidden;
 }
 
-
+textarea{
+    color: #FF0841;
+    font-size: 14px;
+    padding: 10px;
+    font-weight: 600;
+}
 
 
 footer{

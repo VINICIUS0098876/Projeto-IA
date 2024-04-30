@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="home.js" defer></script>
     <title>HOME</title>
 </head>
 <body>
@@ -16,15 +17,15 @@
 
     <main>
         <div class="boxs">
-            <div class="box1"></div>
-            <div class="box2"></div>
+            <textarea id="answer-pt" class="box1"></textarea>
+            <textarea id="traducao" class="box2"></textarea>
         </div>
     </main>
 
 
     <footer>
-        <input type="text" placeholder="Digite algo...">
-        <button><i class='bx bxs-send'></i></button>
+        <input id="ask" type="text" placeholder="Digite algo...">
+        <button id="send"><i class='bx bxs-send'></i></button>
     </footer>
     
 </body>
